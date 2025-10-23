@@ -1,0 +1,31 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.main01 {
+    // border: 2px solid red;
+    padding: 15px 0px;
+    background-color: white;
+
+    .for-center-main01 {
+        // border: 2px solid blue;
+        width: 100%;
+        margin: 0 auto;
+
+        .brand-logo-box-one {
+            // border: 3px solid green;
+            display: flex;
+            align-items: center;
+
+            li {
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 45%;
+                }
+            }
+        }
+    }
+}

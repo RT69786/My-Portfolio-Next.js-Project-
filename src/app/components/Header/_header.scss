@@ -1,0 +1,131 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.header {
+  //   border: 2px solid red;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+
+  
+  .ashar-fontName {
+    font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-size: 260px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 200px;
+  letter-spacing: -9px;
+  color: rgb(249, 249, 249);
+  text-decoration: none;
+  text-transform: none;
+  z-index: 3;
+  display: flex;
+
+  text-shadow: 0 0 10px rgba(249, 249, 249, 0.2);
+  }
+  .ashar-fontName span {
+  color: rgb(249, 69, 44);
+  font-weight: 900;
+}
+
+  .ashar-big-picture {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-65%);
+    scale: 0.85;
+  z-index: 2;
+  }
+
+  .AsharPicture-Bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  .one-line-para {
+    position: absolute;
+    color: white;
+    bottom: 200px;
+    right: 20px;
+    max-width: 380px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+
+  
+
+  .nav {
+    // border: 2px solid blue;
+    position: absolute;
+    left: 66%;
+    width: 33%;
+    z-index: 4;
+    top: 3%;
+    // background-color: #1d1d1d;
+    // padding: 0px 23px;
+    // border-radius: 55px;
+    // border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  // .icons {
+  //   // border: 2px solid red;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   width: 14%;
+  //   padding: 15px;
+  //   position: absolute;
+  //   top: 843px;
+  //   left: 83%;
+
+  //   .div-circle-one {
+  //     border: 1px solid white;
+  //     border-radius: 100px;
+  //     width: 20%;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     padding: 2px 25px;
+
+  //     i {
+  //       font-size: 30px;
+  //       color: white;
+  //     }
+  //   }
+
+  //   .div-circle-two {
+  //     border: 1px solid white;
+  //     border-radius: 100px;
+  //     width: 20%;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     padding: 2px 25px;
+
+  //     i {
+  //       font-size: 30px;
+  //       color: white;
+  //     }
+  //   }
+
+  //   .div-circle-three {
+  //     border: 1px solid white;
+  //     border-radius: 100px;
+  //     width: 20%;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     padding: 2px 25px;
+
+  //     i {
+  //       font-size: 30px;
+  //       color: white;
+  //     }
+  //   }
+  // }
+}

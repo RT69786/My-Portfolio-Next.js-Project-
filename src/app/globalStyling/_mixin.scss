@@ -1,0 +1,39 @@
+@mixin breakpoint($point) {
+
+    @if $point == mobiles {
+      @media (max-width: 406px) { @content; }
+    }
+    @else if $point == MobileScreen2 {
+      @media (max-width: 390px) { @content; }
+    }
+    @else if $point == MobileScreen1 {
+      @media (max-width: 440px) { @content; }
+    }
+    @else if $point == TabletScreen2 {
+      @media (max-width: 830px) { @content; }
+    }
+    @else if $point == TabletScreen1 {
+      @media (max-width: 1024px) { @content; }
+    }
+     @else if $point == DesktopScreen3 {
+      @media (max-width: 1366px) { @content; }
+    }
+    @else if $point == DesktopScreen2 {
+      @media (max-width: 1440px) { @content; }
+    }
+    @else if $point == DesktopScreen1 {
+      @media (max-width: 1660px) { @content; }
+    }
+    @else if $point == DesktopScreening1 {
+      @media (max-width: 1820px) { @content; }
+    }
+  
+  
+    // 🔽 New height-based breakpoints
+    @else if $point == ShortScreen1 {
+      @media (max-height: 821px) { @content; }
+    }
+    @else if $point == ShortScreen2 {
+      @media (max-height: 650px) { @content; }
+    }
+  }

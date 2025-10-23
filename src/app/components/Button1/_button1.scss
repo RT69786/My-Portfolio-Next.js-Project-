@@ -1,0 +1,19 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.case-study-btn {
+    border: 1px solid white;
+    background-color: transparent;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 16px;
+    cursor: pointer;
+
+    h5 {
+        font-size: 17px;
+        font-weight: 400;
+    }
+}

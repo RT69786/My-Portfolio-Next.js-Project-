@@ -1,0 +1,28 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.main02 {
+  // border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+
+  .one-para-tag {
+    // border: 2px solid green;
+  display: inline-block;
+    line-height: 1.9;
+    text-align: center;
+    font-size: 43px;
+    width: 74%;
+
+    img {
+      width: 4%;
+    }
+
+    .emoji {
+      font-size: 33px;
+      padding: 0 10px;
+    }
+  }
+}

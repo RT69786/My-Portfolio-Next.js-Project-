@@ -1,0 +1,44 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.capsule-container {
+  position: relative;
+  width: 100%;
+  //   border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 5%;
+  height: 32vh; // now this fully controls where they drop
+  overflow: hidden;
+  // background-color: aquamarine;
+}
+
+.capsule {
+  position: absolute;
+  background: transparent;
+  color: #1f1f1f;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 30px;
+  letter-spacing: 0.3px;
+  border: 1px solid #1f1f1f;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  cursor: grab;
+  user-select: none;
+  transition: background 0.3s ease;
+  background-color: white;
+  transform-origin: center;
+  transition: transform 0.2s ease;
+  font-weight: 700;
+
+  &:hover {
+    // background: linear-gradient(135deg, #262626, #363636);
+    color: #1f1f1f;
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+}

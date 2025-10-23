@@ -1,0 +1,61 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.featured-work-box {
+  // border: 2px solid blue;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease;
+  padding: 95px 0px;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .content {
+    // border: 2px solid red;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 40px;
+
+    h3 {
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .text-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      p {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.5;
+        width: 65%;
+
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
