@@ -9,56 +9,60 @@
   position: relative;
   overflow: hidden;
 
-  
-  .ashar-fontName {
-    font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  font-size: 260px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 200px;
-  letter-spacing: -9px;
-  color: rgb(249, 249, 249);
-  text-decoration: none;
-  text-transform: none;
-  z-index: 3;
-  display: flex;
-
-  text-shadow: 0 0 10px rgba(249, 249, 249, 0.2);
-  }
-  .ashar-fontName span {
-  color: rgb(249, 69, 44);
-  font-weight: 900;
-}
-
-  .ashar-big-picture {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-65%);
-    scale: 0.85;
-  z-index: 2;
-  }
-
-  .AsharPicture-Bg {
+  .glowing-light {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
+    width: 600px; /* bigger = wider glow */
+    height: 600px;
+    background: radial-gradient(circle, #d52121 0%, transparent 70%);
+    transform: translate(-50%, -35%);
+    filter: blur(160px); /* soften the glow */
+    z-index: 1; /* behind the main image */
+    opacity: 0.8; /* adjust glow intensity */
   }
+
+  .ashar-bg {
+    position: absolute;
+    width: 35%;
+    // bottom: 10px;
+    top: 60px;
+    z-index: 2;
+    left: 30px;
+  }
+
+   .hamid-pic {
+    position: absolute;
+    width: 30%;
+    right: 40px;
+    z-index: 2;
+    bottom: 200px;
+  }
+
+  .ashar-big-picture {
+    position: absolute;
+    left: 930px;
+    transform: translateX(-63%);
+    scale: 0.85;
+    z-index: 2;
+    // bottom: 5px;
+    // top: 12px;
+  }
+
+ 
 
   .one-line-para {
     position: absolute;
     color: white;
-    bottom: 200px;
-    right: 20px;
-    max-width: 380px;
+    bottom: 80px;
+    // right: 100px;
+    max-width: 530px;
     font-weight: 500;
     letter-spacing: 0.2px;
     line-height: 1.5;
-    font-size: 20px;
+    font-size: 23px;
+    left: 70px;
   }
-
-  
 
   .nav {
     // border: 2px solid blue;

@@ -3,7 +3,7 @@
 import React from "react";
 import "./_navbar.scss";
 import { motion } from "framer-motion";
-import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import Button2 from "../Button2/Button2";
 
 const Navbar = () => {
   return (
@@ -20,22 +20,26 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#about-me">
-              <span data-text="About-Me">About</span>
+            <a href="#about">
+              <span data-text="About">About</span>
             </a>
           </li>
           <li>
-            <a href="#My-Work">
-              <span data-text="My-Work">Work</span>
+            <a href="#work">
+              <span data-text="Work">Work</span>
             </a>
           </li>
+
+          <li>
+            <Button2 topText="Get in touch" />
+          </li>
         </ul>
-        <HoverBorderGradient>
+        {/* <HoverBorderGradient>
               <h2 className="hover-border-btn">
                 <i className="ri-arrow-right-line"></i>
                 Contact Me
               </h2>
-            </HoverBorderGradient>
+            </HoverBorderGradient> */}
       </section>
     </nav>
   );

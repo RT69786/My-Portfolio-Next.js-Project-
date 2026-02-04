@@ -1,0 +1,33 @@
+.impact-wrapper {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.impact-track {
+  display: flex;
+  gap: 40px;
+  cursor: grab;
+  user-select: none;
+}
+
+.impact-track:active {
+  cursor: grabbing;
+}
+
+.impact-card {
+  width: 260px;
+  height: 360px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+  }
+}

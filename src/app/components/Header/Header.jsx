@@ -3,28 +3,21 @@
 import React from "react";
 import "./_header.scss";
 import Navbar from "../Navbar/Navbar";
-import { color, motion } from "framer-motion";
-
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
     <header className="header">
+      <div className="glowing-light"></div>
+      <img className="ashar-big-picture" src="/pics/pic8.png" alt="pic8" />
+      <img className="hamid-pic" src="/pics/HAMID.svg" alt="hamid" />
 
-      <div className="flex flex-col gap-4 w-fit absolute bottom-[20px]">
-        <div className="bg-white rounded-[50px] font-medium p-2 py-3 flex items-center gap-2 w-fit">
-          <span className="bg-green-400 rounded-full h-2 w-2"></span>
-          Creative Frontend Developer
-        </div>
-      <h1 className=" ashar-fontName ">Ashar <span>*</span></h1>
-      </div>
-      
-
-      <img className="ashar-big-picture" src="ProfilePic (1).png" alt="pic 6"/>
-      <img className="AsharPicture-Bg" src="Need Bg-Photoroom.png" alt="pic 6"/>
-      
+      <img className="ashar-bg" src="/pics/ASHARBg.svg" alt="asharbg" />
 
       <p className="one-line-para">
-        Strategic design that drives growth, not just looks good. I create everything your brand needs to attract customers and turn them into sales.
+        Strategic design that drives growth, not just looks good. I create
+        everything your brand needs to attract customers and turn them into
+        sales.
       </p>
 
       <div className="nav">
