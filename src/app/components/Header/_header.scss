@@ -23,6 +23,7 @@
   }
 
   .ashar-bg {
+    // border: 2px solid red;
     position: absolute;
     width: 35%;
     // bottom: 10px;
@@ -40,8 +41,9 @@
   }
 
   .ashar-big-picture {
+    // border: 2px solid red;
     position: absolute;
-    left: 930px;
+    left: 1040px;
     transform: translateX(-63%);
     scale: 0.85;
     z-index: 2;
