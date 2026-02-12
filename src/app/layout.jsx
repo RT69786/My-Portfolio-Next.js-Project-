@@ -1,5 +1,5 @@
 import ContactModal from "./components/ContactModal1/ContactModal";
-import { ContactProvider } from "../context/ContactContext";
+import { ContactProvider } from "../Context/ContactContext";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.scss";
 import LoaderWrapper from "./components/Loader/LoaderWrapper";
