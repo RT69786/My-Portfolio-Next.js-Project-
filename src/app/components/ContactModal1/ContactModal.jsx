@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useContact } from "@/context/ContactContext";
+import { useContact } from "../../../Context/ContactContext";
 import "./_contactModal.scss";
 
 export default function ContactModal() {
