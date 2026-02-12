@@ -6,25 +6,35 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
+  // track mouse
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePos({
-        x: e.clientX,
-        y: e.clientY,
-      });
-    };
-
+    const handleMouseMove = (e) => setMousePos({ x: e.clientX, y: e.clientY });
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const parallaxStyle = (strength = 30) => ({
-    transform: `translate(
-    ${(mousePos.x - window.innerWidth / 2) / strength}px,
-    ${(mousePos.y - window.innerHeight / 2) / strength}px
-  )`,
-  });
+  // track window size
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const updateSize = () =>
+        setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+      updateSize();
+      window.addEventListener("resize", updateSize);
+      return () => window.removeEventListener("resize", updateSize);
+    }
+  }, []);
+
+  const parallaxStyle = (strength = 30) => {
+    if (!windowSize.width || !windowSize.height) return {}; // safe SSR fallback
+    return {
+      transform: `translate(
+        ${(mousePos.x - windowSize.width / 2) / strength}px,
+        ${(mousePos.y - windowSize.height / 2) / strength}px
+      )`,
+    };
+  };
 
   return (
     <motion.header
@@ -40,26 +50,22 @@ const Header = () => {
         className="ashar-big-picture"
         style={parallaxStyle(20)}
       />
-
       <motion.img
         src="/pics/HAMID.svg"
         alt="Hamid Bg"
         className="hamid-pic"
         style={parallaxStyle(45)}
       />
-
       <motion.img
         src="/pics/ASHARBg.svg"
         alt="Ashar Bg"
         className="ashar-bg"
         style={parallaxStyle(45)}
       />
-
       <motion.p className="one-line-para" style={parallaxStyle(45)}>
         I build thoughtful interfaces where design meets clean, intentional
         code.
       </motion.p>
-
       <div className="nav">
         <Navbar />
       </div>
