@@ -1,3 +1,4 @@
+"use client";
 import "./loader-name.scss";
 
 export default function LoaderName({ isVisible }) {
