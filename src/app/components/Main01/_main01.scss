@@ -1,5 +1,6 @@
 .main01 {
   // border: 2px solid red;
+  scroll-margin-top: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,12 +8,7 @@
   position: relative;
 
   .big-div-one {
-    background-color: rgba(
-      249,
-      249,
-      249,
-      0.8
-    ); // light color with some transparency
+    background-color: rgba(249, 249, 249, 0.8); // light color with some transparency
     width: 610px; // equal width and height for a perfect square
     height: 610px;
     border-radius: 50px; // gives a smooth rounded-square look
@@ -49,10 +45,10 @@
     align-items: center;
 
     .div-one {
-      //   border: 2px solid green;
+        // border: 2px solid green;
       display: flex;
       align-items: center;
-      width: 10.7%;
+      width: 14%;
       justify-content: space-between;
       margin-bottom: 520px;
 

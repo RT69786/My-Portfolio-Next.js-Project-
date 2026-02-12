@@ -13,13 +13,17 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 600px; /* bigger = wider glow */
-    height: 600px;
-    background: radial-gradient(circle, #d52121 0%, transparent 70%);
+    width: 700px; // slightly bigger for softer spread
+    height: 700px;
+    background: radial-gradient(
+      circle,
+      rgba(213, 33, 33, 0.6) 0%,
+      transparent 75%
+    );
     transform: translate(-50%, -35%);
-    filter: blur(160px); /* soften the glow */
-    z-index: 1; /* behind the main image */
-    opacity: 0.8; /* adjust glow intensity */
+    filter: blur(200px); // more blur for smoother glow
+    z-index: 1; // behind the main image
+    opacity: 0.6; // reduced intensity
   }
 
   .ashar-bg {
@@ -27,15 +31,15 @@
     position: absolute;
     width: 35%;
     // bottom: 10px;
-    top: 60px;
+    top: 90px;
     z-index: 2;
-    left: 30px;
+    left: 20px;
   }
 
-   .hamid-pic {
+  .hamid-pic {
     position: absolute;
-    width: 30%;
-    right: 40px;
+    width: 35%;
+    right: 20px;
     z-index: 2;
     bottom: 200px;
   }
@@ -43,95 +47,29 @@
   .ashar-big-picture {
     // border: 2px solid red;
     position: absolute;
-    left: 1040px;
+    left: 370px;
     transform: translateX(-63%);
     scale: 0.85;
     z-index: 2;
-    // bottom: 5px;
-    // top: 12px;
+    width: 975px;
   }
 
- 
-
   .one-line-para {
+    // border: 2px solid red;
     position: absolute;
     color: white;
-    bottom: 80px;
+    bottom: 40px;
     // right: 100px;
     max-width: 530px;
     font-weight: 500;
     letter-spacing: 0.2px;
     line-height: 1.5;
     font-size: 23px;
-    left: 70px;
+    left: 20px;
   }
 
-  .nav {
-    // border: 2px solid blue;
-    position: absolute;
-    left: 66%;
-    width: 33%;
-    z-index: 4;
-    top: 3%;
-    // background-color: #1d1d1d;
-    // padding: 0px 23px;
-    // border-radius: 55px;
-    // border: 1px solid rgba(255, 255, 255, 0.3);
-  }
-
-  // .icons {
-  //   // border: 2px solid red;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   width: 14%;
-  //   padding: 15px;
-  //   position: absolute;
-  //   top: 843px;
-  //   left: 83%;
-
-  //   .div-circle-one {
-  //     border: 1px solid white;
-  //     border-radius: 100px;
-  //     width: 20%;
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //     padding: 2px 25px;
-
-  //     i {
-  //       font-size: 30px;
-  //       color: white;
-  //     }
-  //   }
-
-  //   .div-circle-two {
-  //     border: 1px solid white;
-  //     border-radius: 100px;
-  //     width: 20%;
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //     padding: 2px 25px;
-
-  //     i {
-  //       font-size: 30px;
-  //       color: white;
-  //     }
-  //   }
-
-  //   .div-circle-three {
-  //     border: 1px solid white;
-  //     border-radius: 100px;
-  //     width: 20%;
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //     padding: 2px 25px;
-
-  //     i {
-  //       font-size: 30px;
-  //       color: white;
-  //     }
-  //   }
+  // .nav {
+  //   border: 2px solid blue;
+  //  width: 100%;
   // }
 }

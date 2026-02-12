@@ -3,6 +3,7 @@
 import React from "react";
 import "./_smallbox.scss";
 import Button1 from "../Button1/Button1";
+import { motion } from "framer-motion";
 
 const SmallBox = ({
   bgImage,
@@ -18,11 +19,23 @@ const SmallBox = ({
   descriptionStyle = {},
 }) => {
   const style = {
-    backgroundImage: `url(${bgImage})`,
+    
   };
 
   return (
-    <div className="small-box" style={style}>
+    <motion.div
+      className="small-box"
+      style={style}
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+
+      <div
+    className="bg-image"
+    style={{ backgroundImage: `url(${bgImage})` }}
+  ></div>
       <div className="overlay"></div>
 
       <div className="content">
@@ -44,7 +57,7 @@ const SmallBox = ({
           <h6>{headingThree}</h6>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

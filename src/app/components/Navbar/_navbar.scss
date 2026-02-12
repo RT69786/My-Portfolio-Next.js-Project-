@@ -2,13 +2,27 @@
 @import "../../globalStyling/variables";
 
 .navbar {
-    // border: 2px solid red;
+  // border: 2px solid red;
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  z-index: 999;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-  padding: 20px 0;
-  width: 100%;
+
+  width: 30%;
+  padding: 12px 18px;
+
+  background: rgba(0, 0, 0, 0.55); // dark glass
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
 
   .for-center-navbar {
     // border: 2px solid blue;
@@ -18,14 +32,7 @@
     align-items: center;
     gap: 50px;
     justify-content: center;
-
-    // .logo {
-
-    //     // border: 2px solid green;
-    //     img {
-    //         width: 13%;
-    //     }
-    // }
+   
 
     .nav-links {
       // border: 2px solid yellow;
@@ -33,7 +40,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 13px;
-      width: 85%;
+      width: 100%;
 
       li {
         list-style-type: none;
@@ -54,7 +61,9 @@
             display: inline-block;
             position: relative;
             z-index: 1;
-            transition: transform 0.4s ease, color 0.3s ease;
+            transition:
+              transform 0.4s ease,
+              color 0.3s ease;
           }
 
           &::before {
@@ -108,10 +117,7 @@
           &:hover i {
             transform: translateX(4px); // subtle move on hover
           }
-
-          
         }
-       
       }
     }
   }

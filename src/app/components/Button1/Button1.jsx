@@ -5,11 +5,12 @@ import "./_button1.scss";
 import { motion } from "framer-motion";
 
 const Button1 = ({
-  text = "Case Study",
+  text = "View Project",
   width = "20%",
   bgColor = "transparent",
   borderColor = "white",
   textColor = "white",
+  href = "#",
 }) => {
   const style = {
     width,
@@ -19,9 +20,18 @@ const Button1 = ({
   };
 
   return (
-    <div className="case-study-btn" style={style}>
+    <motion.a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="case-study-btn"
+      style={style}
+      whileHover={{ scale: 1.08, y: -3 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
       <h5>{text}</h5>
-    </div>
+    </motion.a>
   );
 };
 

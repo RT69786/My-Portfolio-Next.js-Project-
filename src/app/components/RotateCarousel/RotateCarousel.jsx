@@ -25,7 +25,7 @@ export default function RotateCarousel() {
   const TOTAL = images.length * CARD_WIDTH;
 
   // duplicate images for infinite illusion
-  const loopImages = [...images, ...images, ...images, ...images];
+  const loopImages = [...images, ...images, ...images, ...images, ...images];
 
   // infinite wrap
   x.on("change", (latest) => {

@@ -1,41 +1,69 @@
 "use client";
-
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./_header.scss";
 import Navbar from "../Navbar/Navbar";
 import { motion } from "framer-motion";
 
 const Header = () => {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePos({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  const parallaxStyle = (strength = 30) => ({
+    transform: `translate(
+    ${(mousePos.x - window.innerWidth / 2) / strength}px,
+    ${(mousePos.y - window.innerHeight / 2) / strength}px
+  )`,
+  });
+
   return (
-    <header className="header">
+    <motion.header
+      className="header"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
       <div className="glowing-light"></div>
-      <img className="ashar-big-picture" src="/pics/pic8.png" alt="pic8" />
-      <img className="hamid-pic" src="/pics/HAMID.svg" alt="hamid" />
+      <motion.img
+        src="/pics/pic8.png"
+        alt="portrait of Ashar"
+        className="ashar-big-picture"
+        style={parallaxStyle(20)}
+      />
 
-      <img className="ashar-bg" src="/pics/ASHARBg.svg" alt="asharbg" />
+      <motion.img
+        src="/pics/HAMID.svg"
+        alt="Hamid Bg"
+        className="hamid-pic"
+        style={parallaxStyle(45)}
+      />
 
-      <p className="one-line-para">
-        Strategic design that drives growth, not just looks good. I create
-        everything your brand needs to attract customers and turn them into
-        sales.
-      </p>
+      <motion.img
+        src="/pics/ASHARBg.svg"
+        alt="Ashar Bg"
+        className="ashar-bg"
+        style={parallaxStyle(45)}
+      />
+
+      <motion.p className="one-line-para" style={parallaxStyle(45)}>
+        I build thoughtful interfaces where design meets clean, intentional
+        code.
+      </motion.p>
 
       <div className="nav">
         <Navbar />
       </div>
-
-      {/* <div className="icons">
-        <div className="div-circle-one">
-          <i className="ri-instagram-line"></i>
-        </div>
-        <div className="div-circle-two">
-          <i className="ri-linkedin-line"></i>
-        </div>
-        <div className="div-circle-three">
-          <i className="ri-github-line"></i>
-        </div>
-      </div> */}
-    </header>
+    </motion.header>
   );
 };
 

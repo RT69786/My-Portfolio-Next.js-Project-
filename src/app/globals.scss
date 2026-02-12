@@ -3,19 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: "Geist", sans-serif;
-  --font-mono: "Geist Mono", monospace;
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-heading);
 }
 
-/* Form elements clean-up */
-button,
-input,
-textarea,
-select {
-  font: inherit;
-  border: none;
-  outline: none;
-  background: none;
+/* Apply Inter globally */
+body {
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Apply Space Grotesk to headings only */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
 }
 
 * {
@@ -27,9 +31,11 @@ select {
 
 html,
 body {
-  overflow: hidden;
   height: 100%;
-  overflow-y: auto;
+  // overflow-y: hidden;
+  overflow-x: hidden;
   width: 100%;
   margin: 0;
+  scroll-behavior: smooth;
+  // background: black;
 }

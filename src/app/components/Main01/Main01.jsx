@@ -3,51 +3,69 @@
 import React from "react";
 import "./_main01.scss";
 import Button2 from "../Button2/Button2";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1,y: 0,
+  transition: { duration: 0.8, ease: "easeOut", },
+  },
+};
 
 const Main01 = () => {
   return (
-    <main className="main01">
+    <main className="main01" id="about">
       <div className="big-div-one"></div>
       <div className="big-div-two"></div>
-      <section className="for-center-main01">
-        <div className="div-one">
+
+      <motion.section
+        className="for-center-main01"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ staggerChildren: 0.14 }}
+      >
+        <motion.div className="div-one" variants={fadeUp}>
           <div className="square-box-color"></div>
-          <h4>Hey, Just An Intro</h4>
-        </div>
+          <h4>Who I Am & What I Do</h4>
+        </motion.div>
 
         <div className="div-two">
-          <h3>
-            A UX design leader driven by empathy, curiosity, and purpose. I
-            craft experiences that don’t just look good — they solve real
-            problems. From apps to websites, my goal is to make products feel
-            natural, intuitive, and truly impactful in people’s lives.
-          </h3>
+          <motion.h3 variants={fadeUp}>
+            I’m a frontend developer who loves turning ideas into clean,
+            interactive, and responsive web experiences. I focus on building
+            modern user interfaces using React, Next.js, and CSS with attention
+            to detail, performance, and smooth interactions that feel good to
+            use.
+          </motion.h3>
 
-          <div className="handling-button">
+          <motion.div className="handling-button" variants={fadeUp}>
             <Button2 topText="Get in touch" />
-          </div>
+          </motion.div>
 
           <div className="handling-two-divs">
-            <div className="part-one">
-              <h5>Bringing Ideas to Life</h5>
+            <motion.div className="part-one" variants={fadeUp}>
+              <h5>Building Thoughtful Interfaces</h5>
               <p>
-                I obsess over the details—because that's what turns good design
-                into great design. This care earns trust from stakeholders who
-                know I treat their projects like my own.
+                I care deeply about structure, spacing, and interaction. From
+                reusable components to smooth animations, I focus on writing
+                frontend code that is maintainable, scalable, and easy to
+                understand.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="part-two">
-              <h5>Collaborate with Me</h5>
+            <motion.div className="part-two" variants={fadeUp}>
+              <h5>How I Work</h5>
               <p>
-                Let’s create something extraordinary together! Whether you’re
-                looking to visualize a product, animate a concept, or build an
-                interactive experience.
+                I enjoy collaborating, learning, and improving with every
+                project. Whether it’s refining UI details, implementing
+                animations, or fixing bugs, I approach problems patiently and
+                thoughtfully.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </main>
   );
 };

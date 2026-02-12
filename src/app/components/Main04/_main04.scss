@@ -1,9 +1,10 @@
 .main04 {
-  //   border: 2px solid red;
+  // border: 2px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 55px 0px;
+  padding: 100px 0px;
+  position: relative;
 
   .for-center-main04 {
     // border: 2px solid blue;
@@ -45,7 +46,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-right: 300px;
+        margin-right: 40px;
 
         h2 {
           text-align: center;
@@ -57,7 +58,7 @@
         p {
           text-align: center;
           font-size: 18px;
-          width: 60%;
+          width: 80%;
           padding-top: 8px;
           color: #7f7f80;
           font-weight: 500;
@@ -78,13 +79,13 @@
         align-items: center;
       }
 
-      .component-box-two {
-        // border: 2px solid purple;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 25px;
-      }
+      // .component-box-two {
+      //   // border: 2px solid purple;
+      //   display: flex;
+      //   justify-content: space-between;
+      //   align-items: center;
+      //   margin-top: 25px;
+      // }
     }
   }
 }

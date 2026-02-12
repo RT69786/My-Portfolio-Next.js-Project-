@@ -1,0 +1,74 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useContact } from "@/context/ContactContext";
+import "./_contactModal.scss";
+
+export default function ContactModal() {
+  const { showForm, closeForm } = useContact();
+  const [isClosing, setIsClosing] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // trigger fade-in
+  useEffect(() => {
+    if (showForm) {
+      requestAnimationFrame(() => setMounted(true));
+    }
+  }, [showForm]);
+
+  // ESC key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") handleClose();
+    };
+
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setMounted(false);
+
+    setTimeout(() => {
+      setIsClosing(false);
+      closeForm();
+    }, 350); // must match CSS duration
+  };
+
+  if (!showForm && !isClosing) return null;
+
+  return (
+    <div
+      className={`contact-overlay ${
+        mounted ? "" : "fade-out"
+      }`}
+      onClick={handleClose}
+    >
+      <div
+        className="contact-modal"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button className="close-btn" onClick={handleClose}>
+          ✕
+        </button>
+
+        <h2>GET IN TOUCH</h2>
+        <p>
+          Feel free to reach out. I’m always open to discussing new projects.
+        </p>
+
+        <form className="contact-form">
+          <input type="text" placeholder="* What is your name?" />
+          <input type="email" placeholder="* What is your email?" />
+          <input type="tel" placeholder="* What is your phone number?" />
+          <textarea rows="4" placeholder="Would you like to leave a message?" />
+
+          <button type="submit" className="send-btn">
+            SEND
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}

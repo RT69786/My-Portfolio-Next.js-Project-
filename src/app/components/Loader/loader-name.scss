@@ -1,0 +1,71 @@
+.loader-name {
+  height: 100vh;
+  width: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.loader-name.exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* BIG, confident headline */
+.loader-name h1 {
+  font-size: 72px; // 👈 more presence
+  letter-spacing: 3px;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Accent line */
+.loader-name .line {
+  width: 0;
+  height: 2px;
+  background: #d52121;
+  margin: 20px 0;
+  animation: lineGrow 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Supporting text */
+.loader-name p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lineGrow {
+  to {
+    width: 140px;
+  }
+}
