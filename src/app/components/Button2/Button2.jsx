@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import "./_button2.scss";
-import { useContact } from "../../../context/ContactContext";
+import { useContact } from "../../../Context/ContactContext";
 
 const Button2 = ({ topText }) => {
   const { openForm } = useContact();
