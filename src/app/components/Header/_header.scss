@@ -26,16 +26,20 @@
     padding: 400px 0px;
   }
 
-  @include breakpoint(mobile-sm) {
+  @include breakpoint(mobile){
     padding: 380px 0px;
   }
 
+  @include breakpoint(mobile-sm) {
+    padding: 350px 0px;
+  }
+
   @include breakpoint(mobile-xs) {
-    padding: 370px 0px;
+    padding: 340px 0px;
   }
 
   @include breakpoint(mobile-xxs) {
-    padding: 365px 0px;
+    padding: 335px 0px;
   }
 
   // .glowing-light {
@@ -97,16 +101,20 @@
     }
 
     @include breakpoint(mobile-lg) {
-      top: 435px;
+      top: 465px;
       width: 48%;
     }
 
     @include breakpoint(mobile) {
-      top: 440px;
+      top: 460px;
     }
 
     @include breakpoint(mobile-sm) {
       top: 430px;
+    }
+
+    @include breakpoint(mobile-xs){
+      top: 410px;
     }
   }
 
@@ -146,20 +154,24 @@
 
     @include breakpoint(mobile-lg) {
       width: 48%;
-      bottom: 170px;
+      bottom: 125px;
       // z-index: 2;
     }
 
+    @include breakpoint(mobile){
+      bottom: 112px;
+    }
+
     @include breakpoint(mobile-sm) {
-      bottom: 150px;
+      bottom: 100px;
     }
 
     @include breakpoint(mobile-xs){
-      bottom: 140px;
+      bottom: 115px;
     }
 
     @include breakpoint(mobile-xxs){
-      bottom: 140px;
+      bottom: 100px;
     }
   }
 
@@ -233,15 +245,15 @@
     }
 
     @include breakpoint(mobile-sm) {
-      top: 90px;
+      top: 65px;
     }
 
     @include breakpoint(mobile-xs) {
-      top: 90px;
+      top: 65px;
     }
 
     @include breakpoint(mobile-xxs) {
-      top: 110px;
+      top: 72px;
     }
   }
 
@@ -283,23 +295,28 @@
       text-align: center;
       bottom: 40px;
       line-height: 1.2;
-      font-size: 23px;
-      left: 30px;
-      max-width: 380px;
+      font-size: 20px;
+      left: 0px;
+      max-width: 500px;
     }
 
     @include breakpoint(mobile-md) {
-      left: 20px;
+      left: 0px;
     }
 
     @include breakpoint(mobile-sm) {
       left: 0px;
+      font-size: 18px;
     }
 
     @include breakpoint(mobile-xs) {
-      max-width: 360px;
-      font-size: 21px;
-      left: 5px;
+      max-width: 345px;
+      font-size: 18px;
+      left: 15px;
+    }
+
+    @include breakpoint(mobile-xxs){
+      left: 10px;
     }
   }
 }
