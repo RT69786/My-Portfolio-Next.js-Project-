@@ -2,56 +2,210 @@
 @import "../../globalStyling/variables";
 
 .header {
-  //   border: 2px solid red;
+  // border: 2px solid red;
   height: 100vh;
   width: 100%;
   background-color: black;
   position: relative;
   overflow: hidden;
 
-  .glowing-light {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 700px; // slightly bigger for softer spread
-    height: 700px;
-    background: radial-gradient(
-      circle,
-      rgba(213, 33, 33, 0.6) 0%,
-      transparent 75%
-    );
-    transform: translate(-50%, -35%);
-    filter: blur(200px); // more blur for smoother glow
-    z-index: 1; // behind the main image
-    opacity: 0.6; // reduced intensity
-  }
+  // .glowing-light {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   width: 700px; // slightly bigger for softer spread
+  //   height: 700px;
+  //   background: radial-gradient(
+  //     circle,
+  //     rgba(213, 33, 33, 0.6) 0%,
+  //     transparent 75%
+  //   );
+  //   transform: translate(-50%, -35%);
+  //   filter: blur(200px); // more blur for smoother glow
+  //   z-index: 1; // behind the main image
+  //   opacity: 0.6; // reduced intensity
+  // }
 
   .ashar-bg {
     // border: 2px solid red;
     position: absolute;
-    width: 35%;
+    width: 34%;
     // bottom: 10px;
     top: 90px;
     z-index: 2;
     left: 20px;
+
+    @include breakpoint(xl-desktop) {
+      width: 33%;
+      left: 45px;
+    }
+
+    @include breakpoint(desktop) {
+      top: 100px;
+    }
+
+    @include breakpoint(laptop) {
+      left: 25px;
+    }
+
+    @include breakpoint(laptop-sm) {
+      top: 120px;
+    }
+
+    @include breakpoint(tablet-lg) {
+      width: 34%;
+      top: 130px;
+    }
+
+    @include breakpoint(tablet) {
+      width: 35%;
+      top: 135px;
+    }
+
+    @include breakpoint(tablet-sm) {
+      top: 175px;
+      width: 36%;
+    }
+
+    @include breakpoint(mobile-lg) {
+      top: 435px;
+      width: 48%;
+    }
+
+    @include breakpoint(mobile) {
+      top: 440px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      top: 460px;
+    }
   }
 
   .hamid-pic {
+    // border: 2px solid green;
     position: absolute;
-    width: 35%;
+    width: 34%;
     right: 20px;
     z-index: 2;
     bottom: 200px;
+
+    @include breakpoint(xl-desktop) {
+      width: 33%;
+      right: 45px;
+    }
+
+    @include breakpoint(desktop) {
+      right: 25px;
+    }
+
+    @include breakpoint(laptop-sm) {
+      bottom: 180px;
+    }
+
+    @include breakpoint(tablet-lg) {
+      width: 34%;
+    }
+
+    @include breakpoint(tablet) {
+      width: 35%;
+      bottom: 240px;
+    }
+
+    @include breakpoint(tablet-sm) {
+      width: 36%;
+    }
+
+    @include breakpoint(mobile-lg) {
+      width: 48%;
+      bottom: 170px;
+      // z-index: 2;
+    }
+
+    @include breakpoint(mobile-sm) {
+      bottom: 170px;
+    }
   }
 
   .ashar-big-picture {
     // border: 2px solid red;
     position: absolute;
-    left: 370px;
-    transform: translateX(-63%);
-    scale: 0.85;
+    left: 570px;
     z-index: 2;
-    width: 975px;
+    width: 655px;
+    top: 20px;
+
+    @include breakpoint(xl-desktop) {
+      width: 560px;
+      left: 570px;
+      top: 25px;
+    }
+
+    @include breakpoint(desktop) {
+      width: 560px;
+      left: 530px;
+    }
+
+    @include breakpoint(laptop) {
+      left: 410px;
+      width: 550px;
+      top: 45px;
+    }
+
+    @include breakpoint(laptop-md) {
+      left: 390px;
+      width: 550px;
+      top: 56px;
+    }
+
+    @include breakpoint(laptop-sm) {
+      left: 340px;
+      width: 530px;
+      top: 70px;
+    }
+
+    @include breakpoint(tablet-lg) {
+      left: 290px;
+      width: 550px;
+      top: 45px;
+    }
+
+    @include breakpoint(tablet) {
+      left: 210px;
+      width: 540px;
+      top: 50px;
+    }
+
+    @include breakpoint(tablet-sm) {
+      width: 525px;
+      top: 75px;
+      left: 210px;
+    }
+
+    @include breakpoint(mobile-lg) {
+      top: 90px;
+      left: 0px;
+      width: 550px;
+    }
+
+    @include breakpoint(mobile-md) {
+      top: 100px;
+    }
+
+    @include breakpoint(mobile) {
+      top: 120px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      top: 147px;
+    }
+
+    @include breakpoint(mobile-xs){
+      top: 175px;
+    }
+
+    @include breakpoint(mobile-xxs){
+      top: 200px;
+    }
   }
 
   .one-line-para {
@@ -66,10 +220,49 @@
     line-height: 1.5;
     font-size: 23px;
     left: 20px;
-  }
 
-  // .nav {
-  //   border: 2px solid blue;
-  //  width: 100%;
-  // }
+    @include breakpoint(xl-desktop) {
+      left: 45px;
+    }
+
+    @include breakpoint(desktop) {
+      font-size: 20px;
+    }
+
+    @include breakpoint(laptop) {
+      max-width: 500px;
+      left: 25px;
+    }
+
+    @include breakpoint(laptop-md) {
+      max-width: 400px;
+    }
+
+    @include breakpoint(tablet-lg) {
+      z-index: 2;
+    }
+
+    @include breakpoint(mobile-lg) {
+      text-align: center;
+      bottom: 40px;
+      line-height: 1.2;
+      font-size: 23px;
+      left: 30px;
+      max-width: 380px;
+    }
+
+    @include breakpoint(mobile-md) {
+      left: 20px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      left: 0px;
+    }
+
+    @include breakpoint(mobile-xs) {
+      max-width: 360px;
+      font-size: 21px;
+      left: 5px;
+    }
+  }
 }

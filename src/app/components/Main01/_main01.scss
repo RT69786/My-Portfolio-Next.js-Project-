@@ -1,3 +1,6 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
 .main01 {
   // border: 2px solid red;
   scroll-margin-top: 120px;
@@ -7,8 +10,26 @@
   padding: 150px 0px;
   position: relative;
 
+  @include breakpoint(desktop) {
+    padding: 130px 0px;
+  }
+
+  @include breakpoint(tablet-lg) {
+    padding: 110px 0px;
+  }
+
+  @include breakpoint(mobile-lg) {
+    padding: 30px 0px;
+    margin-top: 45px;
+  }
+
   .big-div-one {
-    background-color: rgba(249, 249, 249, 0.8); // light color with some transparency
+    background-color: rgba(
+      249,
+      249,
+      249,
+      0.8
+    ); // light color with some transparency
     width: 610px; // equal width and height for a perfect square
     height: 610px;
     border-radius: 50px; // gives a smooth rounded-square look
@@ -17,6 +38,32 @@
     left: -190px;
     top: 120px;
     z-index: -1;
+
+    @include breakpoint(xl-desktop) {
+      width: 590px;
+      height: 590px;
+      top: 190px;
+    }
+
+    @include breakpoint(desktop) {
+      top: 170px;
+    }
+
+    @include breakpoint(laptop) {
+      width: 600px;
+      height: 600px;
+    }
+
+    @include breakpoint(tablet-sm) {
+      width: 580px;
+      height: 580px;
+      top: 140px;
+    }
+
+    @include breakpoint(mobile-lg) {
+      width: 400px;
+      height: 400px;
+    }
   }
 
   .big-div-two {
@@ -34,29 +81,77 @@
     height: 320px;
     right: -180px;
     bottom: 60px;
+
+    @include breakpoint(desktop) {
+      bottom: 70px;
+    }
   }
   .for-center-main01 {
     // border: 2px solid blue;
     max-width: 1600px;
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    @include breakpoint(desktop) {
+      width: 95%;
+    }
+
+    @include breakpoint(tablet-lg) {
+      display: flex;
+      flex-direction: column;
+    }
+
     .div-one {
-        // border: 2px solid green;
+      // border: 2px solid green;
       display: flex;
       align-items: center;
       width: 14%;
       justify-content: space-between;
-      margin-bottom: 520px;
+      margin-bottom: 560px;
+
+      @include breakpoint(xl-desktop) {
+        margin-bottom: 555px;
+      }
+
+      @include breakpoint(desktop) {
+        margin-bottom: 550px;
+      }
+
+      @include breakpoint(laptop) {
+        width: 15%;
+        margin-bottom: 650px;
+      }
+
+      @include breakpoint(laptop-md) {
+        width: 16%;
+        margin-bottom: 630px;
+      }
+
+      @include breakpoint(laptop-sm) {
+        margin-bottom: 600px;
+      }
+
+      @include breakpoint(tablet-lg) {
+        margin-bottom: 35px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      @include breakpoint(mobile-lg) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+      }
 
       .square-box-color {
         // border: 2px solid green;
         background-color: #d52121;
-        width: 10px;
-        height: 10px;
+        width: 13px;
+        height: 13px;
         border-radius: 2px;
       }
 
@@ -64,26 +159,96 @@
         font-size: 18px;
         font-weight: 500;
         color: #29292b;
+
+        @include breakpoint(laptop-sm) {
+          font-size: 16px;
+        }
+
+        @include breakpoint(tablet-lg) {
+          margin-left: 15px;
+          font-size: 20px;
+        }
       }
     }
 
     .div-two {
-      //   border: 2px solid green;
+      // border: 2px solid green;
       width: 75%;
       display: flex;
       flex-direction: column;
       // align-items: center;
 
+      @include breakpoint(laptop) {
+        width: 76%;
+      }
+
+      @include breakpoint(tablet-lg) {
+        width: 100%;
+      }
+
       h3 {
-        font-size: 48px;
+        font-size: 45px;
         font-weight: 640;
         line-height: 1.2;
         color: #1e1e1e;
+
+        @include breakpoint(xl-desktop) {
+          font-size: 45px;
+        }
+
+        @include breakpoint(desktop) {
+          font-size: 44px;
+        }
+
+        @include breakpoint(laptop) {
+          font-size: 45px;
+        }
+
+        @include breakpoint(laptop-md) {
+          font-size: 43px;
+        }
+
+        @include breakpoint(laptop-sm) {
+          font-size: 40px;
+        }
+
+        @include breakpoint(tablet) {
+          font-size: 35px;
+        }
+
+        @include breakpoint(tablet-sm) {
+          font-size: 33px;
+        }
+
+        @include breakpoint(mobile-lg) {
+          text-align: center;
+          font-size: 26px;
+          line-height: 1.4;
+        }
+
+        @include breakpoint(mobile-md) {
+          font-size: 25px;
+        }
+
+        @include breakpoint(mobile) {
+          font-size: 22px;
+        }
+
+        @include breakpoint(mobile-xxs) {
+          font-size: 20px;
+        }
       }
 
       .handling-button {
         // border: 2px solid red;
         padding: 65px 0px;
+
+        @include breakpoint(mobile-lg) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 50px 0px;
+        }
       }
 
       .handling-two-divs {
@@ -92,25 +257,81 @@
         justify-content: space-between;
         align-items: center;
 
+        @include breakpoint(mobile-lg) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
         .part-one {
           // border: 2px solid blue;
           display: flex;
           flex-direction: column;
-          width: 45%;
+          width: 47%;
+
+          @include breakpoint(mobile-lg) {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          @include breakpoint(mobile) {
+            width: 95%;
+          }
 
           h5 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 700;
             color: #29292b;
+
+            @include breakpoint(laptop-sm) {
+              font-size: 18px;
+            }
+
+            @include breakpoint(tablet-lg) {
+              font-size: 20px;
+            }
+
+            @include breakpoint(mobile-lg) {
+              text-align: center;
+              font-size: 21px;
+            }
+
+            @include breakpoint(mobile-xxs) {
+              font-size: 20px;
+            }
           }
 
           p {
-            font-size: 18px;
+            font-size: 20px;
             padding-top: 15px;
             width: 87%;
             line-height: 1.5;
             color: #7f7f80;
             font-weight: 500;
+
+            @include breakpoint(desktop) {
+              width: 90%;
+            }
+
+            @include breakpoint(laptop-sm) {
+              font-size: 18px;
+            }
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+              width: 100%;
+            }
+
+            @include breakpoint(tablet-sm) {
+              font-size: 16px;
+            }
+
+            @include breakpoint(mobile-lg) {
+              text-align: center;
+              font-size: 18px;
+            }
           }
         }
 
@@ -118,21 +339,72 @@
           // border: 2px solid purple;
           display: flex;
           flex-direction: column;
-          width: 45%;
+          width: 47%;
+
+          @include breakpoint(mobile-lg) {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 50px;
+          }
+
+          @include breakpoint(mobile) {
+            width: 95%;
+          }
 
           h5 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 700;
             color: #29292b;
+
+            @include breakpoint(laptop-sm) {
+              font-size: 18px;
+            }
+
+            @include breakpoint(tablet-lg) {
+              font-size: 20px;
+            }
+
+            @include breakpoint(mobile-lg) {
+              text-align: center;
+              font-size: 21px;
+            }
+
+            @include breakpoint(mobile-xxs) {
+              font-size: 20px;
+            }
           }
 
           p {
-            font-size: 18px;
+            font-size: 20px;
             padding-top: 15px;
             width: 87%;
             line-height: 1.5;
             color: #7f7f80;
             font-weight: 500;
+
+            @include breakpoint(desktop) {
+              width: 90%;
+            }
+
+            @include breakpoint(laptop-sm) {
+              font-size: 18px;
+            }
+
+            @include breakpoint(tablet) {
+              font-size: 16px;
+              width: 100%;
+            }
+
+            @include breakpoint(tablet-sm) {
+              font-size: 16px;
+            }
+
+            @include breakpoint(mobile-lg) {
+              text-align: center;
+              font-size: 18px;
+            }
           }
         }
       }

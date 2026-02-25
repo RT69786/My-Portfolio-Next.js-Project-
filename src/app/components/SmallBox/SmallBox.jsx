@@ -17,26 +17,22 @@ const SmallBox = ({
   headingStyle = {},
   titleStyle = {},
   descriptionStyle = {},
+  boxType = "wide", // Add this: can be "wide" (for div-one) or "small" (for div-two/three)
 }) => {
-  const style = {
-    
-  };
+  const style = {};
 
   return (
     <motion.div
       className="small-box"
+      data-box-type={boxType} // This is the secret to total SCSS control
       style={style}
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-
-      <div
-    className="bg-image"
-    style={{ backgroundImage: `url(${bgImage})` }}
-  ></div>
-      <div className="overlay"></div>
+      <div className="bg-image" style={{ backgroundImage: `url(${bgImage})` }}></div>
+     
 
       <div className="content">
         <h3 style={headingStyle}>{heading}</h3>

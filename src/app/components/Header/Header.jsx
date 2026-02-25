@@ -36,6 +36,22 @@ const Header = () => {
     };
   };
 
+  const slideUp = {
+  hidden: {
+    opacity: 0,
+    y: 80,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: [0.25, 0.1, 0.25, 1], // smooth cubic-bezier
+    },
+  },
+};
+
+
   return (
     <motion.header
       className="header"

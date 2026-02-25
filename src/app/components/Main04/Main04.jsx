@@ -39,6 +39,7 @@ const Main04 = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
+    
       <section className="for-center-main04">
         <div className="two-divs-handling-3">
           <div className="div-three">
@@ -66,11 +67,11 @@ const Main04 = () => {
               points={[
                 "What I value when working with others:",
 
-                "1. Clear and honest communication, even when things are uncertain",
+                "1. Clear, honest communication — even in uncertainty.",
 
-                "2. Respect for different skill sets — design, frontend, backend, and beyond",
+                "2. Respect for every skill set involved.",
 
-                "3. Asking questions early instead of fixing misunderstandings later",
+                "3. Ask early, avoid fixing misunderstandings later.",
 
                 "4. Giving and receiving feedback with an open mind",
 

@@ -65,6 +65,7 @@ const Main02 = () => {
                 headingOne="Next.js"
                 headingTwo="SCSS"
                 headingThree="Responsive + Animations"
+                boxType="wide"
                 buttonProps={{
                   width: "150px",
                   text: "View Live",
@@ -85,8 +86,9 @@ const Main02 = () => {
                 title="Corporate Website Conversion"
                 description="Rebuilt a WordPress business website using Next.js with modular components, improved layout structure, and fully responsive behavior across devices."
                 headingOne="Next.js"
-                headingTwo="Component Architecture"
-                headingThree="Responsive Layout"
+                headingTwo="Framer Motion"
+                headingThree="Modern UI Structure"
+                boxType="small"
                 buttonProps={{
                   width: "150px",
                   text: "View Live",
@@ -107,6 +109,7 @@ const Main02 = () => {
                 headingOne="Next.js"
                 headingTwo="Framer Motion"
                 headingThree="Modern UI Structure"
+                boxType="small"
                 buttonProps={{
                   width: "150px",
                   text: "View Live",
@@ -129,6 +132,7 @@ const Main02 = () => {
                 headingOne="React"
                 headingTwo="Vite"
                 headingThree="Responsive + Clean Code"
+                boxType="wide"
                 buttonProps={{
                   width: "150px",
                   text: "View Live",

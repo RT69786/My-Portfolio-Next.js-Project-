@@ -2,7 +2,7 @@
 @import "../../globalStyling/variables";
 
 .footer {
-  //   border: 2px solid red;
+  // border: 2px solid red;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -10,6 +10,13 @@
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   padding-top: 55px;
+
+  @include breakpoint(mobile-lg) {
+    padding-top: 40px;
+     border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  }
+
   .for-center-footer {
     // border: 2px solid blue;
     max-width: 1600px;
@@ -17,6 +24,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include breakpoint(desktop) {
+      width: 95%;
+    }
 
     .big-div {
       // border: 2px solid green;
@@ -32,6 +43,27 @@
         line-height: 1;
         letter-spacing: 10px;
         color: white;
+
+        @include breakpoint(tablet-lg) {
+          width: 90%;
+          font-size: 85px;
+        }
+
+        @include breakpoint(tablet) {
+          width: 95%;
+          font-size: 75px;
+        }
+
+        @include breakpoint(mobile-lg) {
+          font-size: 45px;
+          width: 100%;
+        }
+
+        @include breakpoint(mobile-sm) {
+          font-size: 40px;
+        }
+
+       
       }
 
       .two-buttons {
@@ -41,6 +73,14 @@
         align-items: center;
         gap: 20px;
         padding-top: 65px;
+
+        @include breakpoint(mobile-lg) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 30px;
+          padding-top: 45px;
+        }
 
         .email-capsule {
           // border: 2px solid red;
@@ -60,7 +100,6 @@
 
         .button-two {
           // border: 2px solid red;
-          // margin-top: 45px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -75,6 +114,10 @@
         justify-content: center;
         padding-top: 55px;
 
+        @include breakpoint(mobile-lg) {
+          padding-top: 20px;
+        }
+
         .one-para-tag {
           // border: 2px solid blue;
           font-size: 25px;
@@ -84,14 +127,71 @@
           width: 80%;
           padding: 15px 0px;
           color: white;
+
+          @include breakpoint(laptop-md) {
+            width: 90%;
+          }
+
+          @include breakpoint(tablet-lg) {
+            font-size: 20px;
+          }
+
+          @include breakpoint(tablet) {
+            width: 95%;
+          }
+
+          @include breakpoint(mobile-lg) {
+            width: 100%;
+            font-size: 16px;
+            font-weight: 560;
+          }
         }
 
         .links {
+          // border: 2px solid red;
           display: flex;
           width: 35%;
           justify-content: space-between;
           padding: 25px 0px;
           margin-top: 25px;
+
+          @include breakpoint(desktop) {
+            width: 40%;
+          }
+
+          @include breakpoint(laptop) {
+            width: 43%;
+          }
+
+          @include breakpoint(laptop-md) {
+            width: 46%;
+          }
+
+          @include breakpoint(laptop-sm) {
+            width: 50%;
+          }
+
+          @include breakpoint(tablet-lg) {
+            width: 55%;
+          }
+
+          @include breakpoint(tablet) {
+            width: 64%;
+          }
+
+          @include breakpoint(tablet-sm) {
+            width: 68%;
+          }
+
+          @include breakpoint(mobile-lg) {
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            // padding: 0px 0px;
+            // gap: 25px;
+            display: none;
+          }
 
           a {
             font-size: 20px;
@@ -104,6 +204,10 @@
             transition:
               opacity 0.2s ease,
               transform 0.2s ease;
+
+            @include breakpoint(mobile-lg) {
+              text-align: center;
+            }
 
             &:hover {
               opacity: 0.7;
@@ -131,10 +235,37 @@
     margin-top: 35px;
     background-color: white;
 
+    @include breakpoint(mobile-lg) {
+      margin-top: 20px;
+    }
+
     h4 {
       color: black;
       font-size: 20px;
       font-weight: 500;
+      text-align: center;
+
+      @include breakpoint(mobile-lg) {
+        line-height: 1.5;
+        font-size: 17px;
+        width: 100%;
+      }
+
+      @include breakpoint(mobile-md) {
+        font-size: 17px;
+      }
+
+      @include breakpoint(mobile) {
+        font-size: 16px;
+      }
+
+      @include breakpoint(mobile-xs) {
+        font-size: 15px;
+      }
+
+      @include breakpoint(mobile-xxs) {
+        font-size: 14px;
+      }
     }
   }
 }

@@ -1,11 +1,29 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
 .small-box-two {
-    // border: 2px solid red;
+  // border: 2px solid red;
   background-color: #f5f4f3;
   display: flex;
   flex-direction: column;
   padding: 20px;
   border-radius: 10px;
   width: 48%;
+
+  @include breakpoint(tablet-lg) {
+    width: 70%;
+  }
+
+  @include breakpoint(tablet) {
+    width: 85%;
+  }
+
+  @include breakpoint(mobile-lg) {
+    width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+  }
 
   .div-one {
     // border: 2px solid green;
@@ -14,10 +32,21 @@
     align-items: center;
     margin-bottom: 40px;
 
+    @include breakpoint(mobile-lg) {
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      margin-bottom: 30px;
+    }
+
     .number-div {
       font-size: 30px;
       color: #29292b;
       font-weight: 600;
+
+      @include breakpoint(mobile-lg) {
+        font-size: 40px;
+      }
     }
 
     .filled-circle-div {
@@ -31,13 +60,67 @@
     display: flex;
     flex-direction: column;
 
+    @include breakpoint(mobile-lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .div-three {
-        // border: 2px solid green;
+      // border: 2px solid green;
       display: flex;
       align-items: center;
-      width: 28%;
+      width: 29%;
       justify-content: space-between;
       margin-bottom: 10px;
+
+      @include breakpoint(laptop) {
+        width: 34%;
+      }
+
+      @include breakpoint(laptop-md) {
+        width: 37%;
+      }
+
+      @include breakpoint(laptop-sm) {
+        width: 39%;
+      }
+
+      @include breakpoint(tablet-lg) {
+        width: 33%;
+      }
+
+      @include breakpoint(tablet) {
+        width: 34%;
+      }
+
+      @include breakpoint(tablet-sm) {
+        width: 36%;
+      }
+
+      @include breakpoint(mobile-lg) {
+        width: 55%;
+      }
+
+      @include breakpoint(mobile-md) {
+        width: 56%;
+      }
+
+      @include breakpoint(mobile) {
+        width: 58%;
+      }
+
+      @include breakpoint(mobile-sm) {
+        width: 62%;
+      }
+
+      @include breakpoint(mobile-xs) {
+        width: 65%;
+      }
+
+      @include breakpoint(mobile-xxs) {
+        width: 68%;
+      }
 
       .square-box-color {
         // border: 2px solid green;
@@ -51,6 +134,10 @@
         font-size: 18px;
         font-weight: 500;
         color: #29292b;
+
+        @include breakpoint(mobile-lg) {
+          // margin-left: 15px;
+        }
       }
     }
 
@@ -64,6 +151,10 @@
         font-weight: 500;
         padding: 10px 0px;
         color: #63615e;
+
+        @include breakpoint(mobile-lg) {
+          padding: 14px 0px;
+        }
       }
     }
   }
