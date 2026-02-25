@@ -10,32 +10,32 @@
   overflow: hidden;
   padding: 480px 0px;
 
-  @include breakpoint(xl-desktop){
+  @include breakpoint(xl-desktop) {
     padding: 415px 0px;
   }
 
-  @include breakpoint(desktop){
+  @include breakpoint(desktop) {
     padding: 415px 0px;
   }
 
-  @include breakpoint(laptop){
+  @include breakpoint(laptop) {
     padding: 415px 0px;
   }
-  
-  @include breakpoint(mobile-lg){
+
+  @include breakpoint(mobile-lg) {
     padding: 400px 0px;
   }
 
-  @include breakpoint(mobile-sm){
-    padding: 390px 0px;
-  }
-
-  @include breakpoint(mobile-xs){
+  @include breakpoint(mobile-sm) {
     padding: 380px 0px;
   }
 
-  @include breakpoint(mobile-xxs){
+  @include breakpoint(mobile-xs) {
     padding: 370px 0px;
+  }
+
+  @include breakpoint(mobile-xxs) {
+    padding: 365px 0px;
   }
 
   // .glowing-light {
@@ -106,7 +106,7 @@
     }
 
     @include breakpoint(mobile-sm) {
-      top: 420px;
+      top: 430px;
     }
   }
 
@@ -151,7 +151,15 @@
     }
 
     @include breakpoint(mobile-sm) {
-      bottom: 170px;
+      bottom: 150px;
+    }
+
+    @include breakpoint(mobile-xs){
+      bottom: 140px;
+    }
+
+    @include breakpoint(mobile-xxs){
+      bottom: 140px;
     }
   }
 
@@ -211,30 +219,30 @@
     }
 
     @include breakpoint(mobile-lg) {
-      top: 50px;
+      top: 90px;
       left: 0px;
       width: 550px;
     }
 
     @include breakpoint(mobile-md) {
-      top: 65px;
+      top: 100px;
     }
 
     @include breakpoint(mobile) {
-      top: 80px;
+      top: 100px;
     }
 
     @include breakpoint(mobile-sm) {
-      top: 105px;
+      top: 90px;
     }
 
-    // @include breakpoint(mobile-xs){
-    //   top: 175px;
-    // }
+    @include breakpoint(mobile-xs) {
+      top: 90px;
+    }
 
-    // @include breakpoint(mobile-xxs){
-    //   top: 200px;
-    // }
+    @include breakpoint(mobile-xxs) {
+      top: 110px;
+    }
   }
 
   .one-line-para {
