@@ -35,11 +35,11 @@ const Footer = () => {
 
             <div className="links">
               <a
-                href="https://www.instagram.com/ashar8605/"
+                href="https://github.com/RT69786?tab=repositories/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                INSTAGRAM <i className="ri-arrow-right-up-line"></i>
+                GITHUB <i className="ri-arrow-right-up-line"></i>
               </a>
 
               <a
